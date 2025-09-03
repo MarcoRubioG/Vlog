@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('likes', function (Blueprint $table) {
              $table ->id();
              $table ->foreignId('user_id')->costrained('users');
-             $table ->foreignId('post_id')->costrained('migration');
+             $table ->foreignId('post_id')->costrained('comments');
              $table->timestamps();
         });
       
