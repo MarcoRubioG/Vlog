@@ -11,10 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('categorias', function (Blueprint $table) {
+        Schema::create('post', function (Blueprint $table) {
              $table ->id();
-             $table ->string('name', 200);
+             $table ->string('title', 200);
+             $table ->string('description', 200);
              $table ->string('img', 100);
+             $table ->string('content');
+             $table ->string('likes');
+
+             $table ->foreignId('user_id')->costrained('users');
+             $table ->foreignId('category_id')->costrained('categorias');
+
+
              $table->timestamps();
         });
     }

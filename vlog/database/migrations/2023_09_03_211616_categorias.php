@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('comments', function (Blueprint $table) {
-            $table->id();
-            $table->integer('post_id');
-            $table->string('content',100);
-            $table->timestamps();
+        Schema::create('categorias', function (Blueprint $table) {
+             $table ->id();
+             $table ->string('name', 200);
+             $table ->string('img', 100);
+
+             $table->timestamps();
         });
     }
 
