@@ -22,6 +22,10 @@ class categories_seed extends Seeder
             'img'=>'default.jpg',
             'created_at'=>date('Y-m-d h:m:s')
         ]);
-       
+       DB::talbe('categorias')->insert([
+        'name'=>'Flores',
+        'img' =>'default.jpg',
+        'create_at'=>date('Y-m-d h:m:s')
+         ]);
     }
 }
